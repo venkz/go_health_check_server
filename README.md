@@ -13,7 +13,7 @@ Smallest Go server which can be used for health check in Docker containers.
 2. Go Install to generate the binary
 
     ```
-    > go install go_health_check_server
+    > GOOS=linux GOARCH=amd64 go install go_health_check_server
 
 3. Start the Go binary
     ```
