@@ -28,7 +28,7 @@ This server supports both TCP and HTTP connections.
 3. Start the Go binary
     ##### HTTP Server
     ```
-    > ./go_health_check_server --protocol = "http" --port 5454
+    > ./go_health_check_server --protocol = "http" --port 8080
     
         Init: Starting Health check server..
         Server(http) up and running on port 8080
@@ -36,7 +36,7 @@ This server supports both TCP and HTTP connections.
     
     ##### TCP Server
     ```
-    > ./go_health_check_server --protocol = "tcp" --port 5454
+    > ./go_health_check_server --protocol = "tcp" --port 8080
     
         Init: Starting Health check server..
         Server(tcp) up and running on port 8080
@@ -45,8 +45,7 @@ This server supports both TCP and HTTP connections.
 4. Test server
     ##### HTTP Test
     ```bash
-    curl -I 127.0.0.1:8080/health                                                                                                                                            ✔
-    HTTP/1.1 200 OK
+    curl -I 127.0.0.1:8080/health                                                                                               HTTP/1.1 200 OK
     Server: Alive and Kicking!
     Date: Wed, 24 Jul 2019 20:52:03 GMT
 
@@ -54,7 +53,7 @@ This server supports both TCP and HTTP connections.
     
     ##### TCP Test
     ```bash
-     nc -v 127.0.0.1 8080                                                                                                                                                     ✔
+     nc -v 127.0.0.1 8080 
      found 0 associations
      found 1 connections:
           1:	flags=82<CONNECTED,PREFERRED>
